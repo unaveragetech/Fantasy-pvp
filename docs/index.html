@@ -11,16 +11,24 @@
 <body>
 <div id="site-header"></div>
 <main>
+<script>
+  // iPhones and iPads can't install an Android app, so don't offer them one.
+  document.addEventListener('DOMContentLoaded', function () {
+    var ua = navigator.userAgent, ios = /iPhone|iPad|iPod/.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    if (ios) { var d = document.getElementById('dl'); if (d) d.style.display = 'none'; document.getElementById('sub').textContent = 'No download needed. Tip: tap Share, then Add to Home Screen, to keep it one tap away.'; }
+  });
+</script>
 <div class="wrap">
   <div class="pagehead">
-    <span class="kicker">Android app</span>
+    <span class="kicker">Play in your browser or on Android</span>
     <h1>Fantasy Athlete PvP</h1>
     <p class="lead">Collect one-of-a-kind athletes. Play 27 game types. Verify every moment.</p>
     <div class="btns">
-      <a class="btn primary" id="dl" href="install.html#download">Download for Android</a>
+      <a class="btn primary" id="play" href="play.html">Play in your browser</a>
+      <a class="btn" id="dl" href="install.html#download">Download for Android</a>
       <a class="btn" href="features.html">See what it does</a>
     </div>
-    <small id="sub" style="color:var(--muted)">Android 7.0 or newer. Installs over the old version and keeps your data.</small>
+    <small id="sub" style="color:var(--muted)">No download needed on iPhone, iPad, Mac or PC. The Android app needs Android 7.0 or newer.</small>
   </div>
 
   <section>
