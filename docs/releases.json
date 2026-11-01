@@ -1,0 +1,19 @@
+{
+  "app": "Fantasy Athlete PvP",
+  "site": "https://unaveragetech.github.io/Fantasy-pvp/",
+  "releases": [
+    {
+      "version": "0.9.0",
+      "versionCode": 2,
+      "tag": "v0.9.0",
+      "date": null,
+      "apk": "FantasyAthletePvP-v0.9.0.apk",
+      "size": 3171310,
+      "sha256": "afea0b5d2d69959e2ad1f607180cae4fe4262be9d54591ade9afa2a1b7fce1d2",
+      "url": "https://github.com/unaveragetech/Fantasy-pvp/releases/tag/v0.9.0",
+      "download": "https://github.com/unaveragetech/Fantasy-pvp/releases/download/v0.9.0/FantasyAthletePvP-v0.9.0.apk",
+      "notes": "# Fantasy Athlete PvP 0.9.0 (first public beta)\n\n- Collect athletes from 3D mystery lockers and build clubs from 5,000 unique athletes.\n- Play 27 game types, with several venues for each.\n- Ranked games against real managers are the only official stats. Casual and bot games are tracked separately.\n- See accuracy and stats for each player on each team.\n- Watch replays in 3D or 2D, and check the odds and roll behind each contest.\n- The app finds the game server automatically if its address changes.\n\nKnown limits: this is an early beta, and the server runs on one computer, so it can go offline. You may need to sign in again if the server address changes. No real money is involved anywhere in the game.\n",
+      "mirror": "https://unaveragetech.github.io/Fantasy-pvp/download/FantasyAthletePvP.apk"
+    }
+  ]
+}

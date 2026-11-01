@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fantasy Athlete PvP features</title>
+<meta name="description" content="What Fantasy Athlete PvP does.">
+<meta name="theme-color" content="#3b82f6">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+<div class="wrap">
+  <div class="pagehead">
+    <span class="kicker">Features</span>
+    <h1>What Fantasy Athlete PvP does</h1>
+    <p class="lead">Fantasy Athlete PvP is an Android app. Download the APK, install it, and update in place.</p>
+  </div>
+  <section><div class="grid" id="features"></div></section>
+  <p style="color:var(--muted)">This page is built from <code>site.features</code> in <code>apkship.json</code>. For a longer, hand-written page, edit <code>features.html</code> directly: the tool never overwrites it.</p>
+</div>
+</main>
+<div id="site-footer"></div>
+<script src="site.js"></script>
+<script>
+window.Site.ready.then(function (site) {
+  var S = window.Site;
+  document.getElementById("features").innerHTML = (site.features || []).map(function (f) {
+    return '<div class="card"><div class="ic">' + S.esc(f.icon || "") + "</div><h3>" + S.esc(f.title) + "</h3><p>" + S.esc(f.text) + "</p></div>";
+  }).join("") || "<p>No features listed yet.</p>";
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{
+  "name": "Fantasy Athlete PvP",
+  "fileName": "FantasyAthletePvP",
+  "tagline": "Collect one-of-a-kind athletes. Play 27 game types. Verify every moment.",
+  "description": "Build clubs from 5,000 unique athletes, compete across football, basketball, tennis, arena combat and more, and check the odds and dice roll behind every contest. Free to play, with no real money anywhere in the game. This is an early beta.",
+  "icon": "🏟️",
+  "themeColor": "#0b1410",
+  "repo": "https://github.com/unaveragetech/Fantasy-pvp",
+  "pagesUrl": "https://unaveragetech.github.io/Fantasy-pvp/",
+  "applicationId": "gg.fantasyathlete.pvp",
+  "minAndroid": "7.0",
+  "features": [
+    {
+      "icon": "🧬",
+      "title": "5,000 unique athletes",
+      "text": "Every athlete has their own look, attributes, sporting talent and Soulju personality."
+    },
+    {
+      "icon": "🎮",
+      "title": "27 game types",
+      "text": "Football, basketball, tennis, hockey, rugby, volleyball, badminton, arena combat and more, with several venues for each surface."
+    },
+    {
+      "icon": "🔒",
+      "title": "Mystery lockers",
+      "text": "Athletes burst out of 3D lockers. Rarer pulls glow, pose and sound special, but rarity never changes match strength."
+    },
+    {
+      "icon": "🏆",
+      "title": "Official stats stay honest",
+      "text": "Only Ranked games between real managers count as official. Casual and bot games are tracked separately."
+    },
+    {
+      "icon": "🎥",
+      "title": "Watch every match",
+      "text": "Replay matches in 3D or on a 2D map, and follow any athlete."
+    },
+    {
+      "icon": "🔍",
+      "title": "Check the proof",
+      "text": "Matches use sealed randomness and a hash-chained record, with the odds and roll behind each contest."
+    }
+  ],
+  "links": [],
+  "privacy": "The game stores your username, club name, a hash of your password, your game data and your matches on its server. Your IP address is used for rate limiting. Traffic passes through Cloudflare, and the app reads its server address from GitHub, so those services can see normal connection details. There are no ads and no payments. This is an early beta: the server runs on a single computer, so it can go offline and data could be lost. Don't reuse a password from another service.",
+  "extras": []
+}

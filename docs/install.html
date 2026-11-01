@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Install Fantasy Athlete PvP on Android</title>
+<meta name="description" content="Step-by-step install guide for Fantasy Athlete PvP on Android, with checksums for every release.">
+<meta name="theme-color" content="#3b82f6">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main>
+<div class="wrap">
+  <div class="pagehead">
+    <span class="kicker">Install</span>
+    <h1>Install Fantasy Athlete PvP on Android</h1>
+    <p class="lead">Fantasy Athlete PvP isn't in an app store, so you install the file yourself. It takes about two minutes. Needs Android 8.0 or newer.</p>
+  </div>
+
+  <section id="download">
+    <h2>1. Download</h2>
+    <div class="btns"><a class="btn primary" id="dl" href="#">Loading...</a></div>
+    <small id="dlsub" style="color:var(--muted)"></small>
+    <p>Wait for the download to finish before you open the file.</p>
+  </section>
+
+  <section>
+    <h2>2. Install</h2>
+    <ol class="steps">
+      <li>Open the downloaded <code>.apk</code> (from your notifications or the Downloads app).</li>
+      <li>If Android says it blocks installs from this source, tap <b>Settings</b> and allow it for your browser or file manager, then go back.</li>
+      <li>Tap <b>Install</b>. If Play Protect asks, choose to install anyway: this is a sideloaded build, not a Play Store one.</li>
+      <li>Updates install over the old version and keep your data, as long as they are signed with the same key (every release is).</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>3. Check the download (optional)</h2>
+    <p>Every release lists a SHA-256 checksum. If Android says the package "can't be parsed" or is "invalid", the download is usually incomplete: compute the checksum of your file (<code>sha256sum file.apk</code>, or any checksum app) and compare it with the one below. If they differ, download again.</p>
+  </section>
+
+  <section>
+    <h2>All versions</h2>
+    <div style="overflow-x:auto"><table id="tbl"><thead><tr><th>Version</th><th>Date</th><th>Size</th><th>SHA-256</th><th></th></tr></thead><tbody><tr><td colspan="5">Loading...</td></tr></tbody></table></div>
+  </section>
+
+  <section>
+    <h2>If something goes wrong</h2>
+    <div class="grid two">
+      <div class="callout"><h3>"App not installed"</h3><p>You may have an older build signed with a different key. Uninstall it first (this removes its local data), then install again.</p></div>
+      <div class="callout"><h3>"There was a problem parsing the package"</h3><p>The download is incomplete or damaged. Check the checksum above and download again.</p></div>
+      <div class="callout"><h3>Can't find the file</h3><p>Look in the Downloads app, or in your browser's download list.</p></div>
+      <div class="callout"><h3>Still stuck?</h3><p><a id="issues" href="#">Open an issue on GitHub</a> and say your Android version and what the message says.</p></div>
+    </div>
+  </section>
+</div>
+</main>
+<div id="site-footer"></div>
+<script src="site.js"></script>
+<script>
+(function () {
+  var S = window.Site;
+  S.ready.then(function (site) { document.getElementById("issues").href = site.repo + "/issues"; });
+  S.releases().then(function (list) {
+    var r = list[0], dl = document.getElementById("dl");
+    if (!r) { dl.textContent = "No release yet"; return; }
+    dl.href = r.download;
+    dl.textContent = "Download v" + r.version + " (" + S.fmtSize(r.size) + ")";
+    document.getElementById("dlsub").textContent = r.date ? "Released " + S.fmtDate(r.date) + "." : "";
+    document.querySelector("#tbl tbody").innerHTML = list.map(function (x) {
+      return "<tr><td>v" + S.esc(x.version) + (x === r ? ' <span class="tag">latest</span>' : "") + "</td><td>" + (x.date ? S.fmtDate(x.date) : "") + "</td><td>" + S.fmtSize(x.size) + '</td><td class="hash">' + S.esc(x.sha256) + '<br><button class="copy btn small" data-h="' + S.esc(x.sha256) + '">copy</button></td><td><a class="btn small" href="' + x.download + '">APK</a></td></tr>';
+    }).join("");
+    S.copyButtons();
+  }).catch(function () { document.getElementById("dl").textContent = "Couldn't load the release list"; });
+})();
+</script>
+</body>
+</html>
