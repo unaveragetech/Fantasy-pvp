@@ -11,6 +11,21 @@
   "minAndroid": "7.0",
   "features": [
     {
+      "icon": "⚔️",
+      "title": "3D combat with real bullets",
+      "text": "Bullets fly at 17 m/s, drop under gravity and can't go past 30 feet. No hit rolls: athletes sprint, walk, roll, take cover, lean round walls, reposition and throw grenades, all shaped by their skills."
+    },
+    {
+      "icon": "📏",
+      "title": "Real rules in every sport",
+      "text": "Offside, penalties and red cards in football, rucks in rugby, free throws in basketball, service boxes and second serves in tennis and padel, and table tennis on a real table."
+    },
+    {
+      "icon": "🔍",
+      "title": "Every match checkable",
+      "text": "Every ball, bullet and stance is recorded and sealed, so anyone can inspect any second and audit it against the physics."
+    },
+    {
       "icon": "🧬",
       "title": "5,000 unique athletes",
       "text": "Every athlete has their own look, attributes, sporting talent and Soulju personality."
